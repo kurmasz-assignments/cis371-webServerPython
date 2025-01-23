@@ -1,0 +1,14 @@
+name: Web Server Check
+on: 
+   workflow_dispatch:
+   push:
+      tags:
+         - checkMe*
+jobs:
+   run-instructor-tests:
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v3
+         - run: curl https://autograder.computing.gvsu.edu/webServerTests.tar --output webServerTests.tar -k
+         - run: tar -xf webServerTests.tar
+         - run: python my_http_server.py
