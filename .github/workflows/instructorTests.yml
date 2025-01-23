@@ -11,5 +11,5 @@ jobs:
          - uses: actions/checkout@v3
          - run: curl https://faculty.computing.gvsu.edu/kurmasz//webServerTests.tar --output webServerTests.tar -k
          - run: tar -xf webServerTests.tar
-         - run: python my_http_server.py
+         - run: python my_http_server.py &
          - run: java -cp lib/junit-4.11.jar:lib/hamcrest-all-1.3.jar:. org.junit.runner.JUnitCore StaticHTTPServerTest
