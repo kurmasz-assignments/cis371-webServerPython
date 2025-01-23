@@ -14,7 +14,7 @@ import http_socket
 import argparse
 
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
-PORT = 8081  # Port to listen on (non-privileged ports are > 1023)
+PORT = 8534  # Port to listen on (non-privileged ports are > 1023)
 
 # Dictionary mapping extensions to mime types
 # (Feel free to add to / modify this dictionary)
